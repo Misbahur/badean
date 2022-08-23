@@ -1,4 +1,5 @@
-<x-guest-layout>
+<x-app-layout>
+    <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
     <x-auth-card>
         <x-slot name="logo">
             <a href="/">
@@ -19,6 +20,12 @@
                 <x-input id="name" class="block mt-1 w-full" type="text" name="name" :value="old('name')" required autofocus />
             </div>
 
+             <div class="mt-4">
+                <x-label for="username" :value="__('Username')" />
+
+                <x-input id="username" class="block mt-1 w-full" type="text" name="username" :value="old('username')" required autofocus />
+            </div>
+
             <!-- Email Address -->
             <div class="mt-4">
                 <x-label for="email" :value="__('Email')" />
@@ -34,6 +41,24 @@
                                 type="password"
                                 name="password"
                                 required autocomplete="new-password" />
+            </div>
+
+            <div class="mt-4">
+                <x-label for="nik" :value="__('NIK')" />
+
+                <x-input id="nik" class="block mt-1 w-full" type="text" name="nik" :value="old('nik')" required autofocus />
+            </div>
+
+            <div class="mt-4">
+                <x-label for="nohp" :value="__('Nomer Hp')" />
+
+                <x-input id="nohp" class="block mt-1 w-full" type="text" name="nohp" :value="old('nohp')" required autofocus />
+            </div>
+
+             <div class="mt-4">
+                <x-label for="alamat" :value="__('Alamat')" />
+
+                <x-input id="alamat" class="block mt-1 w-full" type="text" name="alamat" :value="old('alamat')" required autofocus />
             </div>
 
             <!-- Confirm Password -->
@@ -56,4 +81,5 @@
             </div>
         </form>
     </x-auth-card>
-</x-guest-layout>
+    </div>
+</x-app-layout>
